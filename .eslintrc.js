@@ -14,7 +14,7 @@ module.exports = {
     SharedArrayBuffer: "readonly",
     React: "writable",
   },
-  ignorePatterns: ["build"],
+  ignorePatterns: ["docs"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: { jsx: true },

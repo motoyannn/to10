@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='./docs' react-scripts build",
     "eject": "react-scripts eject",
     "format": "sort-package-json package.json",
     "lint": "eslint --fix --ext .jsx,.js,.tsx,.ts .",

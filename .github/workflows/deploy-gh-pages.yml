@@ -22,7 +22,7 @@ jobs:
 
       - name: Package Build
         run: |
-          rm -rf ./build
+          rm -rf ./docs
           yarn build
 
       - name: Deploy
