@@ -1,12 +1,12 @@
 {
     "git": {
-        "tagName": "v${version}",
         "commit": false,
         "push": false,
         "requireUpstream": false,
         "requireCleanWorkingDir": false
     },
     "github": {
+        "tagName": "v${version}",
         "release": true,
         "draft": true
     },
