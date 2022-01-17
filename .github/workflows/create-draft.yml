@@ -21,6 +21,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Get all Git Tags
+        run: |
+          git fetch --prune --unshallow --tags
+          git tag --list
+
       - name: Set releaser settings
         run: |
           git config --global user.name release-machine
@@ -33,6 +38,9 @@ jobs:
 
       - name: Package Install
         run: npm i -g release-it
+
+      - name: Next version
+        run: echo "Next version is ${release-it --release-version}"
 
       - name: Draft Release Note
         id: minor
