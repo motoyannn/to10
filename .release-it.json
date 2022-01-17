@@ -4,11 +4,11 @@
         "commit": false,
         "push": false,
         "requireUpstream": false,
-        "requireCleanWorkingDir": false,
-        "draft": true
+        "requireCleanWorkingDir": false
     },
     "github": {
-        "release": true
+        "release": true,
+        "draft": true
     },
     "npm": {
         "publish": false,

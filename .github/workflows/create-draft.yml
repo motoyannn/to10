@@ -1,4 +1,4 @@
-name: Patch Release Draft
+name: Draft Release Note
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ on:
         - patch
 
 jobs:
-  release-draft:
+  draft-release-note:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
