@@ -12,7 +12,7 @@
     "test": "react-scripts test"
   },
   "lint-staged": {
-    "*.{json}": "yarn format",
+    "*.json": "yarn format",
     "*.{js,ts,tsx}": "yarn lint"
   },
   "browserslist": {
