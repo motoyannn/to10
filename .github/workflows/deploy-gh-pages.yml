@@ -15,7 +15,7 @@ jobs:
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: "16.x"
 
       - name: Package Install
         run: yarn --frozen-lockfile
@@ -25,9 +25,10 @@ jobs:
           rm -rf ./docs
           yarn build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      - name: Commit and push ./docs
+        run: |
+          rm .gitignore
+          git add docs
+          git commit -m "chore: build and push docs dir (by actions)" -a
+          git pull
+          git push origin master
