@@ -6,11 +6,11 @@ on:
       release:
         required: true
         type: choice
-        description: 'A username passed from the caller workflow'
+        description: "A username passed from the caller workflow"
         options:
-        - major
-        - minor
-        - patch
+          - major
+          - minor
+          - patch
 
 jobs:
   draft-release-note:
@@ -22,9 +22,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Get all Git Tags
-        run: |
-          git fetch --prune --unshallow --tags
-          git tag --list
+        run: git fetch --prune --unshallow --tags
 
       - name: Set releaser settings
         run: |
@@ -38,9 +36,6 @@ jobs:
 
       - name: Package Install
         run: npm i -g release-it
-
-      - name: Next version
-        run: echo "Next version is ${release-it --release-version}"
 
       - name: Draft Release Note
         id: minor
