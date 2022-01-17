@@ -25,6 +25,11 @@ jobs:
           rm -rf ./docs
           yarn build
 
+      - name: Who I am
+        run: |
+          git config --global user.name release-machine
+          git config --global user.email email@example.com
+
       - name: Commit and push ./docs
         run: |
           rm .gitignore
