@@ -1,5 +1,6 @@
 {
     "git": {
+        "tagName": "v${version}",
         "commit": false,
         "push": false,
         "requireUpstream": false,
