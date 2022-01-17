@@ -20,12 +20,9 @@ jobs:
       - name: Package Install
         run: yarn --frozen-lockfile
 
-      - name: Test
-        run: yarn test -- --coverage=false --ci
-
       - name: Package Build
         run: |
-          rm -rf ./dist
+          rm -rf ./build
           yarn build
 
       - name: Deploy
