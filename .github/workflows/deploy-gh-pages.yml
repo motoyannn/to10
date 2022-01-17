@@ -34,6 +34,5 @@ jobs:
         run: |
           rm .gitignore
           git add docs
-          git commit -m "chore: build and push docs dir (by actions)" -a
-          git pull origin main
-          git push origin main
+          git commit -m "chore: build and push docs dir (by actions)"
+          git push
