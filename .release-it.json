@@ -1,0 +1,18 @@
+{
+    "git": {
+        "commit": false,
+        "push": false,
+        "requireUpstream": false,
+        "requireCleanWorkingDir": false,
+        "draft": true
+    },
+    "github": {
+        "release": true
+    },
+    "npm": {
+        "publish": false,
+        "ignoreVersion": true
+    },
+    "requireCleanWorkingDir": false,
+    "requireUpstream": false
+}

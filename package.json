@@ -7,6 +7,7 @@
     "eject": "react-scripts eject",
     "format": "sort-package-json package.json",
     "lint": "eslint --fix --ext .jsx,.js,.tsx,.ts .",
+    "release": "release-it",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
@@ -49,6 +50,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.7",
+    "release-it": "^14.12.3",
     "sort-package-json": "^1.53.1"
   }
 }

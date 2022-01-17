@@ -1,0 +1,36 @@
+name: Patch Release Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        required: true
+        type: choice
+        description: 'A username passed from the caller workflow'
+        options:
+        - major
+        - minor
+        - patch
+
+jobs:
+  release-draft:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_IT_VERSION: 14.12.3
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set releaser settings
+        run: |
+          git config --global user.name release-machine
+          git config --global user.email email@example.com
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+
+      - name: Patch release
+        id: minor
+        run: npx release-it@${RELEASE_IT_VERSION} -- {{ github.event.inputs.release }} --ci
