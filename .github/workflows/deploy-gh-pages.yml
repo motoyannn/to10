@@ -35,4 +35,4 @@ jobs:
           rm .gitignore
           git add docs
           git commit -m "chore: build and push docs dir (by actions)"
-          git push
+          git push origin HEAD:main
