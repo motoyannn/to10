@@ -2,15 +2,16 @@
   "name": "src",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "format": "sort-package-json package.json",
     "format:json": "sort-package-json package.json",
     "format:ts": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "lint": "next lint --dir src",
     "lint:fix": "next lint --dir src --fix",
     "release": "release-it",
-    "start": "next start"
+    "export": "next export"
   },
   "lint-staged": {
     "*.json": "yarn format",

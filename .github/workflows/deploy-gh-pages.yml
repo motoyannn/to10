@@ -15,24 +15,19 @@ jobs:
       - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
 
       - name: Package Install
         run: yarn --frozen-lockfile
 
-      - name: Package Build
-        run: |
-          rm -rf ./docs
-          yarn build
+      - name: Build and Export
+        run: yarn build && yarn export
 
-      - name: Who I am
-        run: |
-          git config --global user.name release-machine
-          git config --global user.email email@example.com
+      - name: add nojekyll
+        run: touch ./out/.nojekyll
 
-      - name: Commit and push ./docs
-        run: |
-          rm .gitignore
-          git add docs
-          git commit -m "chore: build and push docs dir (by actions)"
-          git push origin HEAD:main
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out

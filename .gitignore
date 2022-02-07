@@ -50,6 +50,7 @@ Temporary Items
 # Next build dir
 .next/
 docs/
+out/
 
 ### react ###
 .DS_*
