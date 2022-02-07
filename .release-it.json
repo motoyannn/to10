@@ -1,19 +1,19 @@
 {
-    "git": {
-        "commit": false,
-        "push": false,
-        "requireUpstream": false,
-        "requireCleanWorkingDir": false
-    },
-    "github": {
-        "tagName": "v${version}",
-        "release": true,
-        "draft": true
-    },
-    "npm": {
-        "publish": false,
-        "ignoreVersion": true
-    },
-    "requireCleanWorkingDir": false,
-    "requireUpstream": false
+  "git": {
+    "commit": false,
+    "push": false,
+    "requireUpstream": false,
+    "requireCleanWorkingDir": false
+  },
+  "github": {
+    "tagName": "v${version}",
+    "release": true,
+    "draft": true
+  },
+  "npm": {
+    "publish": false,
+    "ignoreVersion": true
+  },
+  "requireCleanWorkingDir": false,
+  "requireUpstream": false
 }

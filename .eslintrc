@@ -1,0 +1,66 @@
+{
+  "plugins": ["strict-dependencies", "import"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/warnings"
+  ],
+  "ignorePatterns": ["docs", "*.config.js"],
+  "rules": {
+    "semi": ["warn", "always"],
+    "import/no-unresolved": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          {
+            "pattern": "@/pages/**",
+            "group": "internal",
+            "position": "before"
+          }
+          // {
+          //   "pattern": "@/generated/**",
+          //   "group": "internal",
+          //   "position": "before"
+          // },
+          // {
+          //   "pattern": "@/components/ui/**",
+          //   "group": "internal",
+          //   "position": "before"
+          // }
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./"
+      }
+    }
+  }
+}
