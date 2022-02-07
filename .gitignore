@@ -49,6 +49,7 @@ Temporary Items
 ### NextJS ###
 # Next build dir
 .next/
+docs/
 
 ### react ###
 .DS_*

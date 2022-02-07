@@ -11,7 +11,6 @@
   ],
   "ignorePatterns": ["docs", "*.config.js"],
   "rules": {
-    "semi": ["warn", "always"],
     "import/no-unresolved": "off",
     "import/order": [
       "error",

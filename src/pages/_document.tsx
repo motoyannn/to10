@@ -4,8 +4,8 @@ import Document, {
   Head,
   Main,
   NextScript,
-} from 'next/document';
-import React from 'react';
+} from "next/document";
+import React from "react";
 
 export default class MyDocument extends Document {
   static async initialProps(context: DocumentContext) {
@@ -13,9 +13,9 @@ export default class MyDocument extends Document {
   }
   render(): JSX.Element {
     return (
-      <Html lang='ja'>
+      <Html lang="ja">
         <Head>
-          <link rel='icon' href='/favicon.ico' />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
