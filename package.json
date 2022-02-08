@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.json": "yarn format",
-    "*.{js,ts,tsx}": "yarn lint"
+    "*.{js,ts,tsx}": "eslint"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
