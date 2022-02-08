@@ -2,22 +2,23 @@
   "name": "src",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
+    "export": "next export",
     "format": "sort-package-json package.json",
     "format:json": "sort-package-json package.json",
     "format:ts": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "lint": "next lint --dir src",
     "lint:fix": "next lint --dir src --fix",
     "release": "release-it",
-    "export": "next export"
+    "start": "next start"
   },
   "lint-staged": {
     "*.json": "yarn format",
     "*.{js,ts,tsx}": "yarn lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -41,6 +42,7 @@
     "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
     "release-it": "^14.12.3",
+    "sass": "^1.49.7",
     "sort-package-json": "^1.53.1"
   }
 }
