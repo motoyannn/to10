@@ -1,5 +1,4 @@
-import Document, {
-  DocumentContext,
+import {
   Html,
   Head,
   Main,
@@ -7,15 +6,11 @@ import Document, {
 } from "next/document";
 import React from "react";
 
-export default class MyDocument extends Document {
-  static async initialProps(context: DocumentContext) {
-    return await Document.getInitialProps(context);
-  }
-  render(): JSX.Element {
+const Document: React.VFC = () => {
     return (
       <Html lang="ja">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/assets/favicon.ico" />
         </Head>
         <body>
           <Main />
@@ -23,5 +18,6 @@ export default class MyDocument extends Document {
         </body>
       </Html>
     );
-  }
 }
+
+export default Document;
