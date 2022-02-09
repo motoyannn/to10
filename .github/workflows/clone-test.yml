@@ -1,0 +1,22 @@
+name: Draft Release Note
+
+on: workflow_dispatch
+
+jobs:
+  clone-my-repo:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: clone repo into docs dir
+        run: git clone git@github.com:motoyannn/to10-posts.git ./docs
+
+      - name: check
+        run: ls; ls docs; cd docs && ls;
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
